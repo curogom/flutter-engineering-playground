@@ -4,13 +4,13 @@ abstract interface class MediaPlayer {
   void play(String audioType, String fileName);
 }
 
-// Adaptee Class
+// Adaptee 클래스
 class MyAppMediaPlayer {
   void playMp3(String fileName) {}
   void playMp4(String fileName) {}
 }
 
-// Adapter class
+// Adapter 클래스
 class MediaAdapter implements MediaPlayer {
   MediaAdapter(this.myAppMediaPlayer);
 

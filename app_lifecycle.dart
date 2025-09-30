@@ -56,7 +56,7 @@ class _AppLifecyclePageState extends State<AppLifecyclePage> {
   void _onShow() => print('onShow');
 
   void _onStateChanged(AppLifecycleState state) {
-    // Track state changes
+    // 상태 변경 추적
   }
 
   @override

@@ -8,11 +8,11 @@ class AppConfig {
     return _instance!;
   }
 
-  // Reset the singleton, useful in tests
+  // 싱글톤 리셋, 테스트에 유용함
   static void reset() => _instance = null;
 
   String appName = 'My Flutter App';
   String appVersion = '1.0.0';
 
-  // Additional configuration settings...
+  // 추가 구성 설정...
 }

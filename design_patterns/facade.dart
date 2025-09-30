@@ -1,16 +1,16 @@
-// Complex subsystem classes
+// 복잡한 서브시스템 클래스들
 import 'package:flutter/material.dart';
 
 class NetworkManager {
   Future<String> fetchData() async {
-    // Implementation...
+    // 구현부...
     return 'Data';
   }
 }
 
 class DataProcessor {
   String processData(String data) {
-    // Implementation...
+    // 구현부...
     return 'Processed Data';
   }
 }
@@ -26,7 +26,7 @@ class DataFacade {
   }
 }
 
-// Usage in a Flutter app
+// Flutter 앱에서의 사용 예시
 void main() {
   runApp(MaterialApp(
     home: Scaffold(

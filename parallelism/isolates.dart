@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:isolate';
 
-// heavy computation
+// 무거운 연산
 int sum(int end) {
   int sum = 0;
   for (int i = 1; i <= end; i++) {

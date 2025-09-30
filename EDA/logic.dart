@@ -30,9 +30,9 @@ class EventManager {
   Stream get stream => _controller.stream;
 }
 
-// global variable now
-// Better to use a dependency injection
-// you will learn about this later int his part of the book
+// 현재는 전역 변수
+// 의존성 주입을 사용하는 것이 더 좋습니다
+// 책의 이 부분 뒷부분에서 배우게 됩니다
 final eventManager = EventManager();
 
 class AnalyticsService {
@@ -82,9 +82,9 @@ class AnyAnalyticsService {
 }
 
 main() {
-  // You will learn in this part of the book how
-  // to use Dependency Injection to inject this
-  // where needed rather than using a Global variable.
+  // 책의 이 부분에서 의존성 주입을 사용하여
+  // 전역 변수를 사용하는 대신 필요한 곳에
+  // 이것을 주입하는 방법을 배우게 됩니다
   final anyAnalyticsService = AnyAnalyticsService();
   final analyticsService = AnalyticsService(anyAnalyticsService);
   analyticsService.listenToEvents(eventManager.stream);

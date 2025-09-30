@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final helloWorld = nativeLibrary.hello_world();
-    // Convert the Pointer<Char> to a Dart String
+    // Pointer<Char>를 Dart String으로 변환
     final String stringHelloWorld =
         helloWorld.cast<Utf8>().toDartString();
 

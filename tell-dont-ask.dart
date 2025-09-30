@@ -5,8 +5,8 @@ import 'package:flutter/widgets.dart';
 
 class DataService {
   bool isDataAvailable() {
-    // Logic to check if the operation is available
-    return true; // Simulated response
+    // 작업이 가능한지 확인하는 로직
+    return true; // 시뮬레이션 응답
   }
 
   Future<String?> fetchData() async {

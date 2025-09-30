@@ -1,14 +1,14 @@
 import 'dart:collection';
 import 'package:flutter/material.dart';
 
-// Command Interface
+// Command 인터페이스
 abstract class Command {
   String get name;
   void execute();
   void undo();
 }
 
-// Concrete Command for Drawing
+// Drawing을 위한 구체적인 Command
 class DrawCommand implements Command {
   DrawCommand();
 
@@ -22,7 +22,7 @@ class DrawCommand implements Command {
   void undo() {}
 }
 
-// Concrete Command for ChangeColor
+// ChangeColor를 위한 구체적인 Command
 class ChangeColorCommand implements Command {
   ChangeColorCommand();
 
@@ -36,7 +36,7 @@ class ChangeColorCommand implements Command {
   void undo() {}
 }
 
-// Command Manager to handle execution and undoing
+// 실행 및 되돌리기를 처리하는 Command Manager
 class CommandManager {
   final _commandList = ListQueue<Command>();
 
@@ -118,7 +118,7 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-// Usage in the app
+// 앱에서의 사용 예시
 void main() {
   final CommandManager commandManager = CommandManager();
 

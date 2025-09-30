@@ -28,11 +28,11 @@ class TodoViewModel {
     }
   }
 
-  // Add more command methods as necessary
+  // 필요에 따라 더 많은 command 메서드를 추가하세요
 }
 
-// typically this would be a singleton
-// or you must use a dependency injection framework
+// 일반적으로 이것은 싱글톤이거나
+// 의존성 주입 프레임워크를 사용해야 합니다
 final TodoViewModel todoViewModelInstance = TodoViewModel(
   RemoteTodoDataSource(),
   LocalTodoDataSource(),

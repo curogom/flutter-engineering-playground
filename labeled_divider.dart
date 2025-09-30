@@ -90,11 +90,11 @@ class RenderLabeledDivider extends RenderBox {
     final Paint paint = Paint()..color = _color;
     final double yCenter = offset.dy + size.height / 2;
 
-    // Draw the line
+    // 선 그리기
     context.canvas.drawLine(offset,
         Offset(offset.dx + size.width, yCenter), paint);
 
-    // Draw the text
+    // 텍스트 그리기
     final double textStart = offset.dx +
         (size.width - _textPainter.size.width) / 2;
 
@@ -117,7 +117,7 @@ class RenderLabeledDivider extends RenderBox {
   @override
   bool hitTest(HitTestResult result,
       {required Offset position}) {
-    // Check if the incoming position is within the bounds of this render box
+    // 들어오는 위치가 이 렌더 박스의 경계 내에 있는지 확인
     final BoxHitTestEntry entry =
         BoxHitTestEntry(this, position);
     if (size.contains(position)) {

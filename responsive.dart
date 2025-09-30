@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 enum ScreenSize {
-  // Phone in portrait
+  // 세로 모드 폰
   compact(maxWidth: 600),
-  // Tablet in portrait or Foldable in portrait (unfolded)
+  // 세로 모드 태블릿 또는 세로 모드 폴더블(펼침)
   medium(maxWidth: 840),
-  // Phone in landscape or Tablet in landscape or
-  // Foldable in landscape (unfolded) or Desktop
+  // 가로 모드 폰 또는 가로 모드 태블릿 또는
+  // 가로 모드 폴더블(펼침) 또는 데스크톱
   expanded(maxWidth: 1200),
-  // Desktop
+  // 데스크톱
   large(maxWidth: 1600);
 
   const ScreenSize({required this.maxWidth});
@@ -152,13 +152,13 @@ class MyCustomLayout extends StatelessWidget {
 class MyCustomDelegate extends SingleChildLayoutDelegate {
   @override
   BoxConstraints getConstraintsForChild(BoxConstraints constraints) {
-    // Custom constraints for the child
+    // 자식의 커스텀 제약 조건
     return constraints;
   }
 
   @override
   Offset getPositionForChild(Size size, Size childSize) {
-    // Position child at the bottom-right corner
+    // 자식을 오른쪽 하단 모서리에 배치
     return Offset(size.width - childSize.width, size.height - childSize.height);
   }
 
@@ -169,13 +169,13 @@ class MyCustomDelegate extends SingleChildLayoutDelegate {
 class MySingleChildLayoutDelegate extends SingleChildLayoutDelegate {
   @override
   BoxConstraints getConstraintsForChild(BoxConstraints constraints) {
-    // Modify child constraints based on parent's constraints
+    // 부모의 제약 조건을 기반으로 자식의 제약 조건 수정
     return BoxConstraints.tight(const Size(100, 100));
   }
 
   @override
   Offset getPositionForChild(Size size, Size childSize) {
-    // Position child in the center of the parent
+    // 자식을 부모의 중앙에 배치
     return Offset(size.width / 2 - childSize.width / 2,
         size.height / 2 - childSize.height / 2);
   }
@@ -208,11 +208,11 @@ class MyComplexLayout extends StatelessWidget {
 class MyComplexLayoutDelegate extends MultiChildLayoutDelegate {
   @override
   void performLayout(Size size) {
-    // Position 'first' widget
+    // 'first' 위젯 위치 지정
     layoutChild('first', BoxConstraints.loose(size));
     positionChild('first', Offset.zero);
 
-    // Position 'second' widget to the right of 'first'
+    // 'second' 위젯을 'first'의 오른쪽에 위치 지정
     if (hasChild('second')) {
       Size firstSize = layoutChild('first', BoxConstraints.loose(size));
       layoutChild('second', BoxConstraints.loose(size));

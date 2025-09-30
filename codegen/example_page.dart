@@ -10,7 +10,7 @@ class UserProfilePage extends StatelessWidget {
     required this.userId,
   });
 
-  // userId is a field to pass as a query parameter
+  // userId는 쿼리 파라미터로 전달할 필드입니다
   @QueryParam('userId')
   final String userId;
 

@@ -20,7 +20,7 @@ final themeData = ThemeData(
 );
 
 ThemeData newTheme = themeData.copyWith(
-  // Customizing the ElevatedButton theme
+  // ElevatedButton 테마 커스터마이징
   textTheme: themeData.textTheme.copyWith(
     displaySmall: themeData.textTheme.displaySmall!.copyWith(
       color: Colors.red,
@@ -35,7 +35,7 @@ ThemeData newTheme = themeData.copyWith(
 
 main() {
   runApp(
-    // Define ThemeData with a custom primary color
+    // 커스텀 primary 색상으로 ThemeData 정의
     MaterialApp(
       theme: themeData.copyWith(
         colorScheme: themeData.colorScheme.copyWith(

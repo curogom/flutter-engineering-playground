@@ -6,10 +6,10 @@ abstract class Logger {
 }
 
 abstract mixin class ServiceLoggerAbstractMixinClass {
-  void log(String message); // abstract method
+  void log(String message); // 추상 메서드
 
   void toPrint() {
-    // method with body
+    // 본문이 있는 메서드
     if (kDebugMode) {
       print('ClassName: ${objectRuntimeType(this, '')}');
     }
@@ -46,7 +46,7 @@ mixin WidgetLoggerMixin on Widget implements Logger {
 class CustomWidget extends StatelessWidget
     with ServiceLoggerAbstractMixinClass {
   CustomWidget({super.key}) {
-    toPrint(); // from mixin
+    toPrint(); // mixin에서 가져옴
   }
 
   @override

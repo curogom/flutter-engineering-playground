@@ -10,7 +10,7 @@ class SafeContentDisplay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Encoding user content to prevent XSS
+    // XSS 방지를 위해 사용자 콘텐츠 인코딩
     const htmlEscape = HtmlEscape(HtmlEscapeMode.attribute);
     final safeContent = htmlEscape.convert(userContent);
 
@@ -19,13 +19,13 @@ class SafeContentDisplay extends StatelessWidget {
 }
 
 Future<http.Response> fetchData(String url) async {
-  // Ensure the URL uses HTTPS
+  // URL이 HTTPS를 사용하는지 확인
   final uri = Uri.parse(url).replace(scheme: 'https');
   return await http.get(uri);
 }
 
 class EncryptionService {
-  // Replace with a secure key either using secure-random or receive from the backend
+  // secure-random을 사용하거나 백엔드에서 받은 안전한 키로 교체
   final key = encryptPackage.Key.fromUtf8(
     'dmzoGLq72Z9xj+BVdNQNjM8glbkGqNXmHCmD7CLlfcY=',
   );

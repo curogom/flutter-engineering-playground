@@ -29,17 +29,17 @@ class _TodoRepositoryImpl implements TodoRepository {
 
   @override
   Future<void> addTodo(TodoDataModel todo) async {
-    // Implement logic combining local and remote data sources
+    // 로컬 및 원격 데이터 소스를 결합하는 로직 구현
   }
 
   @override
   Future<void> deleteTodo(String id) async {
-    // Implement logic combining local and remote data sources
+    // 로컬 및 원격 데이터 소스를 결합하는 로직 구현
   }
 
   @override
   Future<void> updateTodo(TodoDataModel todo) async {
-    // Implement logic combining local and remote data sources
+    // 로컬 및 원격 데이터 소스를 결합하는 로직 구현
   }
 }
 

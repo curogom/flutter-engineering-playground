@@ -1,12 +1,12 @@
 class User {
-  String _name; // private property
+  String _name; // private 속성
 
   User(this._name);
 
-  String get name => _name; // getter for name
+  String get name => _name; // name getter
 
   set name(String value) {
-    // setter for name
+    // name setter
     if (value.isNotEmpty) {
       _name = value;
     }
@@ -14,7 +14,7 @@ class User {
 }
 
 class Singleton {
-  Singleton._(); // Private constructor
+  Singleton._(); // Private 생성자
 
   static final Singleton instance = Singleton._();
 

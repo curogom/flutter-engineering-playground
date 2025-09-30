@@ -1,4 +1,4 @@
-// Dart basic inheritance
+// Dart 기본 상속
 import 'package:flutter/material.dart';
 
 class People {
@@ -20,7 +20,7 @@ class Student extends People {
 class Lecturer extends People {
   const Lecturer(super.name);
 
-  // only for Lecturer class who can help Student class
+  // Student 클래스를 도울 수 있는 Lecturer 클래스만 가능
   @override
   void help(covariant Student people) {}
 
@@ -33,7 +33,7 @@ class UIO extends Lecturer {
   joinCamp() {}
 }
 
-// Flutter use case
+// Flutter 사용 사례
 class Gesture {}
 
 class DragGesture extends Gesture {}
@@ -81,5 +81,5 @@ void main() {
   uio.help(const Student(1, 'John'));
   uio.giveGrade();
   uio.joinCamp();
-  uio.hashCode; // from Object
+  uio.hashCode; // Object로부터 상속받음
 }

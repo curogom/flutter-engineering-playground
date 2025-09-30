@@ -71,16 +71,14 @@ abstract class S {
 
   static const LocalizationsDelegate<S> delegate = _SDelegate();
 
-  /// A list of this localizations delegate along with the default localizations
-  /// delegates.
+  /// 기본 로컬라이제이션 델리게이트와 함께 이 로컬라이제이션 델리게이트 목록.
   ///
-  /// Returns a list of localizations delegates containing this delegate along with
-  /// GlobalMaterialLocalizations.delegate, GlobalCupertinoLocalizations.delegate,
-  /// and GlobalWidgetsLocalizations.delegate.
+  /// 이 델리게이트와 함께 GlobalMaterialLocalizations.delegate,
+  /// GlobalCupertinoLocalizations.delegate, 그리고
+  /// GlobalWidgetsLocalizations.delegate를 포함하는 로컬라이제이션 델리게이트 목록을 반환합니다.
   ///
-  /// Additional delegates can be added by appending to this list in
-  /// MaterialApp. This list does not have to be used at all if a custom list
-  /// of delegates is preferred or required.
+  /// MaterialApp에서 이 목록에 추가하여 추가 델리게이트를 추가할 수 있습니다.
+  /// 커스텀 델리게이트 목록을 선호하거나 필요한 경우 이 목록을 전혀 사용하지 않아도 됩니다.
   static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
     delegate,
     GlobalMaterialLocalizations.delegate,
@@ -88,7 +86,7 @@ abstract class S {
     GlobalWidgetsLocalizations.delegate,
   ];
 
-  /// A list of this localizations delegate's supported locales.
+  /// 이 로컬라이제이션 델리게이트가 지원하는 로케일 목록.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
     Locale('en', 'GB'),
@@ -97,45 +95,45 @@ abstract class S {
     Locale('fr', 'CA')
   ];
 
-  /// Give as much context as possible here
+  /// 가능한 한 많은 컨텍스트를 제공하세요
   ///
-  /// In en, this message translates to:
+  /// en에서 이 메시지는 다음과 같이 번역됩니다:
   /// **'Hello World!'**
   String get helloWorld;
 
-  /// No description provided for @greetingMessage.
+  /// @greetingMessage에 대한 설명이 제공되지 않았습니다.
   ///
-  /// In en, this message translates to:
+  /// en에서 이 메시지는 다음과 같이 번역됩니다:
   /// **'Hello, {username}! Today is {date}.'**
   String greetingMessage(String username, String date);
 
-  /// No description provided for @greeting.
+  /// @greeting에 대한 설명이 제공되지 않았습니다.
   ///
-  /// In en, this message translates to:
+  /// en에서 이 메시지는 다음과 같이 번역됩니다:
   /// **'{gender, select, male {Hello, Mr. {username}} female {Hello, Ms. {username}} other {Hello, {username}}}'**
   String greeting(String gender, String username);
 
-  /// No description provided for @emailCount.
+  /// @emailCount에 대한 설명이 제공되지 않았습니다.
   ///
-  /// In en, this message translates to:
+  /// en에서 이 메시지는 다음과 같이 번역됩니다:
   /// **'{count, plural, =0 {You have no emails} =1 {You have one email} other {You have {count} emails}}'**
   String emailCount(num count);
 
-  /// balance statement.
+  /// 잔액 명세서.
   ///
-  /// In en, this message translates to:
+  /// en에서 이 메시지는 다음과 같이 번역됩니다:
   /// **'Your pending cost is {COST}'**
   String costText(num COST);
 
-  /// Currency value formatted compactly
+  /// 간결하게 포맷된 통화 값
   ///
-  /// In en, this message translates to:
+  /// en에서 이 메시지는 다음과 같이 번역됩니다:
   /// **'Total: {value}'**
   String formattedCurrency(double value);
 
-  /// Formatted date
+  /// 포맷된 날짜
   ///
-  /// In en, this message translates to:
+  /// en에서 이 메시지는 다음과 같이 번역됩니다:
   /// **'Date: \$date'**
   String formattedDate(DateTime date);
 }
@@ -157,7 +155,7 @@ class _SDelegate extends LocalizationsDelegate<S> {
 
 S lookupS(Locale locale) {
 
-  // Lookup logic when language+country codes are specified.
+  // 언어+국가 코드가 지정된 경우 조회 로직
   switch (locale.languageCode) {
     case 'en': {
   switch (locale.countryCode) {
@@ -173,7 +171,7 @@ S lookupS(Locale locale) {
    }
   }
 
-  // Lookup logic when only language code is specified.
+  // 언어 코드만 지정된 경우 조회 로직
   switch (locale.languageCode) {
     case 'en': return SEn();
     case 'fa': return SFa();

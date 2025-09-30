@@ -31,24 +31,24 @@ class SyncQueue {
       try {
         await operation.perform();
       } catch (error) {
-        // Handle error, possibly re-queue
+        // 에러 처리, 재큐잉 가능
       }
     }
   }
 }
 
 class SyncOperation {
-  // Define operation details
+  // 작업 세부 정보 정의
   Future<void> perform() async {
-    // Implementation of the operation
+    // 작업 구현
   }
 }
 
 main() {
-  // Usage
+  // 사용 예시
   final syncQueue = SyncQueue();
   final syncManager = SyncManager(syncQueue);
 
-  // Add operations to queue
-  // syncQueue.addToQueue(/* SyncOperation instance */);
+  // 큐에 작업 추가
+  // syncQueue.addToQueue(/* SyncOperation 인스턴스 */);
 }

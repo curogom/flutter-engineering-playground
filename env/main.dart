@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      // Use 'config.apiUrl' and 'config.featureEnabled' as needed in your app
+      // 앱에서 필요에 따라 'config.apiUrl'과 'config.featureEnabled' 사용
       home: MyHomePage(
         config: config,
       ),

@@ -106,7 +106,7 @@ void main() {
   subject.attach(observer);
   subject.attach(observer2);
 
-  subject.notifyObservers(); // Notifies the observer
+  subject.notifyObservers(); // 옵저버에게 알림
 
   runApp(const MyApp());
 }

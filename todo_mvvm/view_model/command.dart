@@ -13,14 +13,14 @@ class Command extends ChangeNotifier {
   Future<void> execute() async {
     if (_isExecuting) return;
     _isExecuting = true;
-    // Notify listeners when starting execution
+    // 실행 시작 시 리스너들에게 알림
     notifyListeners();
 
     try {
       await _action();
     } finally {
       _isExecuting = false;
-      // Notify listeners when execution ends
+      // 실행 종료 시 리스너들에게 알림
       notifyListeners();
     }
   }

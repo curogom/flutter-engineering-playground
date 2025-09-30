@@ -1,3 +1,3 @@
 class TestViewModel {
-  // TODO: Implement view model
+  // TODO: 뷰 모델 구현
 }

@@ -9,10 +9,10 @@ class TodoBloc extends Bloc<TodoEvent, TodoState> {
 
   TodoBloc(this.todoUseCases) : super(TodosLoading()) {
     on<LoadTodos>(_onLoadTodos);
-    // Other event handlers...
+    // 기타 이벤트 핸들러들...
   }
 
-  // Handle coming events
+  // 들어오는 이벤트 처리
   Future<void> _onLoadTodos(
     LoadTodos event,
     Emitter<TodoState> emit,

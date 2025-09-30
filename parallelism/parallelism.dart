@@ -4,7 +4,7 @@ import 'dart:isolate';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
-// Function to parse JSON. This will be run in a background isolate.
+// JSON을 파싱하는 함수. 백그라운드 Isolate에서 실행됩니다.
 List<dynamic> parseJson(String jsonString) {
   return json.decode(jsonString);
 }
@@ -26,15 +26,15 @@ class LargeJsonParserWidgetState extends State<LargeJsonParserWidget> {
     loadJsonData();
   }
 
-  // Function to load and parse JSON
+  // JSON을 로드하고 파싱하는 함수
   Future<void> loadJsonData() async {
     setState(() => isLoading = true);
 
-    // Simulate loading a large JSON string
+    // 큰 JSON 문자열 로드를 시뮬레이션
     final jsonString =
-        await loadJsonString(); // Assume this function fetches the JSON string
+        await loadJsonString(); // 이 함수가 JSON 문자열을 가져온다고 가정
 
-    // Use compute to parse JSON in the background
+    // compute를 사용하여 백그라운드에서 JSON 파싱
     final parsedJson = await compute(parseJson, jsonString);
 
     setState(() {
@@ -62,13 +62,13 @@ class LargeJsonParserWidgetState extends State<LargeJsonParserWidget> {
     );
   }
 
-  // Imagine, this loads a very large JSON string from the internet
+  // 인터넷에서 매우 큰 JSON 문자열을 로드한다고 상상해보세요
   Future<String> loadJsonString() async {
     return '["John Smith", "Majid Hajian"]';
   }
 }
 
-// Long lived isolate
+// 장기 실행 Isolate
 class ComputationModel {
   final int iterations;
   final int factor;

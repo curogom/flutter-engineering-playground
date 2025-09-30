@@ -267,10 +267,10 @@ class SnowFlakePainterStandard extends CustomPainter {
       final endY = center.dy + radius * sin(angle);
       final end = Offset(endX, endY);
 
-      // Draw the main line of each snowflake arm
+      // 각 눈송이 팔의 메인 라인 그리기
       canvas.drawLine(center, end, _pencil);
 
-      // Add small branches to each arm for a detailed snowflake
+      // 세밀한 눈송이를 위해 각 팔에 작은 가지 추가
       _drawBranches(canvas, center, end, radius / 3);
     }
   }
@@ -280,7 +280,7 @@ class SnowFlakePainterStandard extends CustomPainter {
     final dy = end.dy - start.dy;
     final angle = atan2(dy, dx);
 
-    // Calculate positions for two branches
+    // 두 가지의 위치 계산
     final leftBranchEnd = Offset(
       end.dx - length * cos(angle + pi / 6),
       end.dy - length * sin(angle + pi / 6),
@@ -290,7 +290,7 @@ class SnowFlakePainterStandard extends CustomPainter {
       end.dy - length * sin(angle - pi / 6),
     );
 
-    // Draw branches
+    // 가지 그리기
     canvas.drawLine(end, leftBranchEnd, _pencil);
     canvas.drawLine(end, rightBranchEnd, _pencil);
   }

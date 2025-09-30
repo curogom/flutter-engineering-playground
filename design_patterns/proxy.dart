@@ -4,7 +4,7 @@ abstract class AccessibleWidget {
   Widget build(BuildContext context);
 }
 
-// Real Widget
+// 실제 위젯
 class RestrictedContentWidget implements AccessibleWidget {
   @override
   Widget build(BuildContext context) {
@@ -38,13 +38,13 @@ checkUserAccess() {
   return true;
 }
 
-// Usage in the app
+// 앱에서의 사용 예시
 void main() {
   runApp(MaterialApp(
     home: Scaffold(
       body: AccessControlProxyWidget(
         protectedWidget: RestrictedContentWidget(),
-        hasAccess: checkUserAccess(), // A function to check user access
+        hasAccess: checkUserAccess(), // 사용자 접근 권한을 확인하는 함수
       ),
     ),
   ));

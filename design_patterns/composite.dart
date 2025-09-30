@@ -76,12 +76,12 @@ class MenuApp2 extends StatelessWidget {
   }
 }
 
-// Abstract class for all menu items (leaf and composite)
+// 모든 메뉴 항목(리프 및 컴포지트)을 위한 추상 클래스
 abstract interface class Menuitem implements Widget {
   void expand(bool expanded);
 }
 
-// Leaf node
+// 리프 노드
 class SimpleMenuItem extends StatelessWidget implements Menuitem {
   const SimpleMenuItem({
     super.key,
@@ -94,7 +94,7 @@ class SimpleMenuItem extends StatelessWidget implements Menuitem {
 
   @override
   void expand(_) {
-    // Leaf node, do nothing
+    // 리프 노드, 아무것도 하지 않음
   }
 
   @override
@@ -103,7 +103,7 @@ class SimpleMenuItem extends StatelessWidget implements Menuitem {
   }
 }
 
-// Composite node that can contain other menu items
+// 다른 메뉴 항목들을 포함할 수 있는 컴포지트 노드
 class Submenu extends StatefulWidget implements Menuitem {
   Submenu({
     super.key,
@@ -147,7 +147,7 @@ class SubmenuState extends State<Submenu> {
   }
 }
 
-// Usage example
+// 사용 예시
 class MenuApp extends StatelessWidget {
   const MenuApp({super.key});
 

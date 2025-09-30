@@ -37,7 +37,7 @@ class WebWidgetFactory extends PlatformWidgetFactory {
   }
 }
 
-// Usage in the app
+// 앱에서의 사용 예시
 void main() {
   PlatformWidgetFactory widgetFactory;
 

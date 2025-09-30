@@ -1,4 +1,4 @@
-// Entity only business logic
+// 엔티티는 비즈니스 로직만 포함
 class Todo {
   Todo({
     required this.id,

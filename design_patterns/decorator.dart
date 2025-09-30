@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-// Base Component
+// 기본 컴포넌트
 abstract class TextComponent {
   Widget build(BuildContext context);
 }
 
-// Concrete Component
+// 구체적인 컴포넌트
 class SimpleText extends TextComponent {
   final String text;
 
@@ -17,7 +17,7 @@ class SimpleText extends TextComponent {
   }
 }
 
-// Decorator
+// 데코레이터
 abstract class TextDecorator extends TextComponent {
   final TextComponent decoratedText;
 
@@ -27,7 +27,7 @@ abstract class TextDecorator extends TextComponent {
   Widget build(BuildContext context);
 }
 
-// Concrete Decorators
+// 구체적인 데코레이터들
 class BorderText extends TextDecorator {
   BorderText(super.decoratedText);
 
@@ -73,7 +73,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Usage in the app
+// 앱에서의 사용 예시
 void main() {
   runApp(
     const MyApp(),

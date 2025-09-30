@@ -12,14 +12,14 @@ class ValidatorUseCases {
   }
 
   static String slugify(String input) {
-    // Lowercase and replace non-alphanumeric characters with hyphens
+    // 소문자로 변환하고 영숫자가 아닌 문자를 하이픈으로 교체
     final nonAlphanumeric = RegExp(r'[^a-z0-9\s-]');
     final normalized = input.toLowerCase().replaceAll(nonAlphanumeric, '-');
 
-    // Trim whitespace and hyphens, then replace multiple consecutive hyphens
+    // 공백과 하이픈을 제거하고, 여러 개의 연속된 하이픈을 교체
     final trimmed = normalized.trim().replaceAll(RegExp(r'-{2,}'), '-');
 
-    // Optionally convert remaining spaces to hyphens (depending on your needs)
+    // 필요에 따라 나머지 공백을 하이픈으로 변환
     final hyphenatedSpaces = trimmed.replaceAll(' ', '-');
 
     return hyphenatedSpaces;

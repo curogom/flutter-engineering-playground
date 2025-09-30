@@ -229,7 +229,7 @@ The remaining valid combinations and their capabilities are:
 */
 
 void main() {
-  // Ask questions to determine desired declaration properties
+  // 원하는 선언 속성을 결정하기 위한 질문
   print(
       'Do you want to be able to construct instances of this declaration? (yes/no)');
   final canConstruct = stdin.readLineSync()!.toLowerCase() == 'yes';
@@ -246,7 +246,7 @@ void main() {
   print('Do you want to be able to exhaustive in this declaration? (yes/no)');
   final isExhaustive = stdin.readLineSync()!.toLowerCase() == 'yes';
 
-  // Filter declarations based on user's answers
+  // 사용자의 답변을 기반으로 선언 필터링
   final potentialDeclarations = declarations.where((declaration) {
     return declaration.canConstruct == canConstruct &&
         declaration.canExtend == canExtend &&
@@ -255,7 +255,7 @@ void main() {
         declaration.canMixin == canMixin;
   }).toList();
 
-  // Present potential declarations or indicate no match
+  // 잠재적인 선언을 제시하거나 일치하는 항목이 없음을 표시
   if (potentialDeclarations.isNotEmpty) {
     print(
       formatTable(

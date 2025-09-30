@@ -3,7 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'todo.g.dart';
 
-// Dart representation of Todo exposed to external layers
+// 외부 레이어에 노출되는 Todo의 Dart 표현
 @collection
 @JsonSerializable()
 class Todo {

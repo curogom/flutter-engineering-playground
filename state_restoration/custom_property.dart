@@ -108,20 +108,20 @@ class RestorableUserThemePreference
 
   @override
   Object? toPrimitives() {
-    // Serialize the UserThemePreference
+    // UserThemePreference 직렬화
     return value.toJson();
   }
 
   @override
   void initWithValue(UserThemePreference value) {
-    // Don't forget to call super
+    // super 호출을 잊지 마세요
     super.initWithValue(value);
-    // Additional initialization actions go here
+    // 추가 초기화 작업은 여기에 작성
   }
 
   @override
   void dispose() {
-    // Clean up if needed
+    // 필요한 경우 정리
     super.dispose();
   }
 }

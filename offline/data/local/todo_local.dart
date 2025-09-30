@@ -9,25 +9,25 @@ class TodoLocalDataSource implements TodoService {
 
   @override
   Future<Todo?> get(String id) async {
-    // Fetching todos from the local database
+    // 로컬 데이터베이스에서 todos 가져오기
     final Todo? todo = await db.get(id);
 
-    // Returning todos to the repository
+    // repository에 todos 반환
     return todo;
   }
 
   @override
   Future<List<Todo>> getAll() async {
-    // Fetching todos from the local database
+    // 로컬 데이터베이스에서 todos 가져오기
     final List<Todo> todos = await db.getAll();
 
-    // Returning todos to the repository
+    // repository에 todos 반환
     return todos;
   }
 
   @override
   Future<List<Todo>> refresh(List<Todo> listTodos) async {
-    // Converting todos to the local model
+    // todos를 로컬 모델로 변환
     return listTodos;
   }
 

@@ -1,3 +1,3 @@
 class TestService {
-  // TODO: Implement service or model
+  // TODO: 서비스 또는 모델 구현
 }

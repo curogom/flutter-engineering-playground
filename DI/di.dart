@@ -16,7 +16,7 @@ class SmsService implements INotificationService {
   }
 }
 
-// Fake notification service for testing
+// 테스트용 가짜 알림 서비스
 class FakeNotificationService implements INotificationService {
   @override
   void sendMessage(String message, String receiver) {

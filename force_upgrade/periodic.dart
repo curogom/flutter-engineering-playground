@@ -15,11 +15,11 @@ class _PeriodicCheckerState extends State<PeriodicChecker> {
   @override
   void initState() {
     super.initState();
-    // this could be in another layer
-    // and can be setup while initializing app
-    // just to demonstrate what it means periodic
-    // so this is a placeholder
-    // Set up a periodic timer to check for updates every hour
+    // 이것은 다른 레이어에 있을 수 있으며
+    // 앱 초기화 중에 설정할 수 있습니다
+    // 단지 주기적이 무엇을 의미하는지 보여주기 위한 것이므로
+    // 이것은 플레이스홀더입니다
+    // 매시간 업데이트를 확인하는 주기적 타이머 설정
     _timer = Timer.periodic(
       const Duration(hours: 1),
       (Timer t) => checkForUpdate(),
@@ -27,7 +27,7 @@ class _PeriodicCheckerState extends State<PeriodicChecker> {
   }
 
   Future<void> checkForUpdate() async {
-    // Your update checking logic here
+    // 여기에 업데이트 확인 로직을 작성하세요
   }
 
   @override

@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   void restoreState(
       RestorationBucket? oldBucket, bool initialRestore) {
-    // Restore any state if needed here.
+    // 필요한 경우 여기에서 상태를 복원합니다.
   }
 
   @override

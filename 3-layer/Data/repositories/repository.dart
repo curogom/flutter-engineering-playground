@@ -4,7 +4,7 @@ import '../data_sources/remote.dart';
 import '../models/model.dart';
 
 class DataRepository {
-  // Placeholder for a data source, e.g., database or network API
+  // 데이터 소스를 위한 플레이스홀더, 예: 데이터베이스 또는 네트워크 API
   DataRepository(this.remote);
 
   final RemoteService remote;

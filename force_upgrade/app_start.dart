@@ -11,18 +11,18 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    // Your method to check for updates
-    // Make sure this method is async and
-    // non-blocking
+    // 업데이트를 확인하는 메서드
+    // 이 메서드가 비동기이고
+    // 논블로킹인지 확인하세요
     checkForUpdate();
   }
 
   Future<void> checkForUpdate() async {
-    // Implement your version check logic here
-    // or potentially in your service layer
-    // this is just a placeholder but better
-    // to have this in a separate service class
-    // to keep your code clean
+    // 여기에 버전 확인 로직을 구현하거나
+    // 서비스 레이어에서 구현할 수 있습니다
+    // 이것은 단지 플레이스홀더이지만
+    // 코드를 깔끔하게 유지하려면 별도의
+    // 서비스 클래스에 두는 것이 더 좋습니다
   }
 
   @override

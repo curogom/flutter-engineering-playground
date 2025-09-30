@@ -96,7 +96,7 @@ abstract class PluginContract {
   void setAnalyticsService(AnalyticsService service) {
     analyticsService = service;
   }
-  // Other common methods can be added here
+  // 기타 공통 메서드들을 여기에 추가할 수 있습니다
 }
 
 class ProfilePlugin implements PluginContract {

@@ -1,4 +1,4 @@
-// Can be constructed, Can be extended but Can be implemented be be used as mixin
+// 생성 가능, 확장 가능하지만 구현 가능하며 mixin으로 사용 가능
 class Testing {
   log() {}
 }
@@ -11,11 +11,11 @@ abstract class Drawable {
 class Circle extends Drawable {
   @override
   void paint() {
-    // Implementation of paint method
+    // paint 메서드 구현
   }
 }
 
-// Cannot be constructed, Can be extended and Can be implemented
+// 생성 불가능, 확장 가능하고 구현 가능
 abstract class Vehicle {
   void moveForward(int meters) {
     print('meters $meters');
@@ -24,27 +24,27 @@ abstract class Vehicle {
 
 class Car extends Vehicle {}
 
-// Cannot be constructed, Cannot be extended but Can be implemented
+// 생성 불가능, 확장 불가능하지만 구현 가능
 interface class People {
   void moveForward(int meters) {}
 }
 
-// Cannot be constructed, Cannot be extended but Can be implemented - Pure interface
+// 생성 불가능, 확장 불가능하지만 구현 가능 - 순수 인터페이스
 abstract interface class Person {
   void moveForward(int meters);
 }
 
-// Can be constructed, Can be extended but Cannot be implemented
+// 생성 가능, 확장 가능하지만 구현 불가능
 base class Animal {
   void moveForward(int meters) {
     // ...
   }
 }
 
-// Can be constructed, Cannot be extended but Cannot be implemented
+// 생성 가능, 확장 불가능하고 구현 불가능
 final class Customer {}
 
-// Cannot be constructed, Can be extended but Can be implemented and it's exhaustive
+// 생성 불가능, 확장 가능하지만 구현 가능하며 완전(exhaustive)함
 sealed class Product {}
 // Product product = Product();
 
@@ -52,12 +52,12 @@ class Perfume extends Product {}
 
 class Jewelry implements Product {}
 
-// Subclasses can be instantiated
+// 서브클래스는 인스턴스화 가능
 Perfume perfume = Perfume();
 Jewelry jewelry = Jewelry();
 
-// Cannot be constructed, Cannot be extended but Cannot be implemented
-// can be used with mixin
+// 생성 불가능, 확장 불가능하고 구현 불가능
+// mixin으로 사용 가능
 mixin Flyable {
   void fly() {}
 }

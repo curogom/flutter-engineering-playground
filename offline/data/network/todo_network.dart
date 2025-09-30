@@ -18,19 +18,19 @@ class TodoNetworkDataSource implements TodoService {
 
   @override
   Future<Todo?> get(String id) async {
-    // Fetching todos from the network
+    // 네트워크에서 todos 가져오기
     final Todo? todo = await httpClient.get('/todos/$id');
 
-    // Returning todos to the repository
+    // repository에 todos 반환
     return todo;
   }
 
   @override
   Future<List<Todo>> getAll() async {
-    // Fetching todos from the network
+    // 네트워크에서 todos 가져오기
     final List<Todo> todos = await httpClient.get('/todos');
 
-    // Returning todos to the repository
+    // repository에 todos 반환
     return todos;
   }
 
